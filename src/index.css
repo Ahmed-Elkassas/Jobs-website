@@ -1107,9 +1107,18 @@ Media Query
   margin-left: 50px;
   margin-top: -100px;
   margin-bottom: 30px;
+  display: none;
  }
  .slider-container .image {
    width: calc(96% / 2);
  }
-
+ .slider-wrapper .btn-left {
+   margin-right: auto;
+   margin-top: 12px;
+   display: block;
+ }
+ .slider-wrapper .btn-right{
+   margin-left: auto;
+   display: block;
+ }
 }

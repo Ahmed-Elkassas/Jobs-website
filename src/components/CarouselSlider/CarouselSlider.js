@@ -31,7 +31,7 @@ const CarouselSlider = () => {
                 </div>
             </div>
             <div className="container">
-                <button type="button" className="btn-left"><FaChevronLeft  className="icon"/></button>
+                <button type="button" className="btn-left"><FaChevronLeft  className="icon1"/></button>
                 <section className="slider-container">
                     {candidates.slice(0, visible).map((candidate) => {
                         return (
@@ -46,7 +46,7 @@ const CarouselSlider = () => {
                         )
                     })}
                 </section>
-                <button type="button" className="btn-right" onClick={loadMore} ><FaChevronRight className="icon" /></button>
+                <button type="button" className="btn-right" onClick={loadMore} ><FaChevronRight className="icon2" /></button>
             </div> 
         </div>
         
