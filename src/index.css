@@ -203,6 +203,36 @@ select:focus {
     left: 96px;
   }
 }
+@media screen and (max-width: 587px) {
+  .job-filter {
+    min-height: min-content;
+  }
+  .job-filter  form{
+    display: flex;
+  }
+  .job-filter form  div {
+    width: 100%;
+  }
+  .job-filter form div label {
+    margin-left: 45px;
+  }
+  .job-filter form div .job-input {
+    width: 80%;
+    display: block; 
+    padding: 15px;
+    margin: auto;
+  }
+  .job-filter form .location {
+    margin-left: 12px;
+  }
+  .job-filter form div .btn-search {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: larger;
+  }
+}
+
+
 
 /* Jobs section */
 
@@ -334,7 +364,7 @@ select:focus {
 }
 /*
 ============
-media Quiery
+Media Query
 ============
 */
 @media screen and (max-width: 1280px)  {
@@ -399,6 +429,49 @@ media Quiery
     width: calc(100% / 4);
   }
 }
+@media screen and (max-width: 587px) {
+  .job-show .job-container {
+    grid-column: span 4;
+    width: 100%;
+  }
+  .job-container .job-item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .job-container .job-img {
+    width: 20%;
+  }
+  .job-container .job-img img{
+    width: 100%;
+  }
+  .job-container .job-info {
+    width: 60%;
+  }
+  .job-container .job-info .job-title {
+    font-size: 1rem;
+  }
+  .job-container .job-more-info {
+    width: 90%;
+    margin: auto;
+    margin-left: 10px;
+  }
+  .job-container .job-more-info .job-type,
+  .job-container .job-more-info .job-typeo,
+  .job-container .job-more-info .job-typey,
+  .job-container .job-more-info .job-typeb,
+  .job-container .job-more-info .job-typef{
+    font-size: 12px;
+    padding: 5px 3px;
+    height: min-content;
+    margin-top: -7px;
+  }
+}
+
+/* X-small Screen */
+@media screen and (max-width: 500px) {
+  
+}
+
 
 /* Start Search Section */
 
@@ -497,7 +570,18 @@ media Quiery
 Media Quirey
 ==============
 */
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 587px) {
+  .part-two {
+    margin-top: 50px;
+    grid-column: span 4;
+    margin-bottom: 20px;
+  }
+  .part-two .head-search::after {
+    width: 108%;
+  }
+  .part-two .head-search h4::before {
+    height: 65px;
+  }
 
 }
 
@@ -522,6 +606,12 @@ Media Quirey
 .btn-container .active {
   background-color: white;
 }
+
+/* 
+=============
+Media Query
+=============
+*/
 @media screen and (max-width: 1310px) {
   .btn-container {
   width: 71.3%;
@@ -544,7 +634,25 @@ Media Quirey
     padding: 12px 13px;
     font-size: .7rem;
     font-weight: 300;
+  }
 }
+
+@media screen and (max-width: 576px) {
+  .btn-container {
+    width: 100%;
+  }
+  .btn-container .filter-category {
+    font-size: 1rem;
+    padding: 12px 24px; 
+  }
+}
+/* x-small Screen */
+@media screen and (max-width: 500px) {
+  .btn-container .filter-category {
+    font-size: .86rem;
+    font-weight: 500;
+    padding: 12px 20px;
+  }
 }
 
 /* job counts */
@@ -688,98 +796,63 @@ Media Quirey
   padding: 20px;
 }
 
-/* carousel slider */
-
-.slider {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: center;
-  background-color: #4f52d3;
-  color: var(--text-color);
+/* 
+===========
+Media Query
+===========
+*/
+@media screen and (max-width: 576px) {
+  .jobCount {
+    gap: 0;
+  }
+  .jobCount .sec-left {
+    grid-column: span 5;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  .jobCount .sec-left .count-item  .icon-count{
+    margin-left: 35px;
+    float: none;
+  }
+  .jobCount .sec-left .count-item h4 {
+    font-size: 14px;
+    margin-top: 13px;
+    margin-left: 10px;
+    text-align: center;
+  }
+  .jobCount .sec-left .count-item span {
+    font-size: 12px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .jobCount .sec-right {
+    grid-column: span 5;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .jobCount .social-sec {
+    grid-column: span 5;
+    margin-bottom: 30px;
+  }
 }
-.slider span {
-  font-weight: 300;
-  text-transform: capitalize;
-}
-.slider h2 {
-  font-size: 2rem;
-  padding-top: 7px;
-  margin-bottom: 20px;
-}
-.slider .underline {
-  width: 30px;
-  height: 2px;
-  background-color: #000;
-  margin: auto;
-  margin-bottom: 20px;
-}
-.slider p {
-  width: 45%;
-  margin: auto;
-  text-align: center;
-  padding-bottom: 90px;
-  line-height: 1.5;
-}
-.slider-container {
-  display: inline-flex;
-  margin-right: 20px;
-  margin-left: 50px;
-  margin-top: -100px;
-  margin-bottom: 30px;
-}
-.slider-wrapper button {
-  margin-top: -30px;
-  background-color: transparent;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  border: none;
-  transform: translateY(-99px);
-  color: var(--text-color);
-} 
-.slider-wrapper button .icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-
-}
-.slider-container .image {
-  width: 130px;
-  height: 175px;
-  margin-right: 35px;
-  position: relative;
-}
-.slider-container .carousel .image::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0,130,170,0),rgba(54, 63, 66, .9));
-  z-index: 1;
-  transition: var(--transition);
-}
-.slider-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.slider-container .carousel p {
-  margin-top: -20px;
-  margin-bottom: 30px;
-  color: var(--text-color);
-  font-size: 13px;
-  margin-left: 15px;
-  position: relative;
-  z-index: 3;
-  transition: var(--transition);
-}
-.slider-container .carousel h5 {
-  font-size: 12px;
-}
-.slider-container .carousel small {
-  margin-left: 10px;
+/* x-small screen */
+@media screen and (max-width: 500px) {
+  .jobCount .sec-left .count-item {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .jobCount .sec-left .count-item h4 {
+    font-size: .76rem;
+  }
+  .jobCount .sec-left .count-item .icon-count {
+    margin-left: 8px;
+  }
+  .jobCount .sec-left .count-item span {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
 }
 
 /* Featured Jobs */
@@ -910,4 +983,117 @@ Media Quirey
   background-color: #4f52d3;
   color: var(--text-color);
   margin-left: 10px;
+}
+
+/* carousel slider */
+
+.slider {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: #4f52d3;
+  color: var(--text-color);
+}
+.slider span {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.slider h2 {
+  font-size: 2rem;
+  padding-top: 7px;
+  margin-bottom: 20px;
+}
+.slider .underline {
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.slider  .paragraph-slider {
+  width: 45%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 90px;
+  line-height: 1.5;
+}
+.slider-container {
+  display: inline-flex;
+  margin-right: 20px;
+  margin-left: 50px;
+  margin-top: -100px;
+  margin-bottom: 30px;
+}
+.slider-container .carousel {
+}
+.slider-wrapper button {
+  margin-top: -30px;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: none;
+  transform: translateY(-99px);
+  color: var(--text-color);
+} 
+.slider-wrapper button .icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+}
+.slider-container .image {
+  width: 130px;
+  height: 175px;
+  margin-right: 35px;
+  position: relative;
+}
+.slider-container .carousel .image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,130,170,0),rgba(54, 63, 66, .9));
+  z-index: 1;
+  transition: var(--transition);
+}
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-container .carousel p {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-size: 13px;
+  margin-left: 15px;
+  position: relative;
+  z-index: 3;
+  transition: var(--transition);
+}
+.slider-container .carousel h5 {
+  font-size: 12px;
+}
+.slider-container .carousel small {
+  margin-left: 10px;
+}
+
+/* 
+============
+Media Query
+============
+*/
+@media screen and (max-width: 567px) {
+  .slider h2 {
+    font-size: 1.5rem;
+  }
+  .slider .paragraph-slider {
+    width: 100%;
+    font-size: 16px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }

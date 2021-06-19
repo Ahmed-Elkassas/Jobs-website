@@ -5,25 +5,20 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const CarouselSlider = () => {
 
-    const [index, setIndex] = useState(0);
-    const { id, name, job, image, address } = candidates[index];
 
+    const [visible, setVisible] = useState(6);
 
-    const checkNumber = (number) => {
-    if (number > candidates.length - 1) {
-      return 0;
+    const loadMore = () => {
+        if (visible <= 6) {
+            candidates.shift();
+            let visible = 5
+            setVisible(visible + 1);
+
+        }else {
+            setVisible(visible - 1);
+        }
     }
-    if (number < 0) {
-      return candidates.length - 1;
-    }
-    return number;
-    };
-    const nextPerson = () => {
-        setIndex((index) => {
-        let newIndex = index + 1;
-        return checkNumber(newIndex);
-        });
-    };
+
 
     return (
         <div className="slider-wrapper">
@@ -32,13 +27,13 @@ const CarouselSlider = () => {
                     <span>find top talents</span>
                     <h2>explore our latest candidates</h2>
                     <div className="underline"></div>
-                    <p>Work with someone perfect for your team &amp; get amazing results working with the best employees, hire talents with confidence!</p>
+                    <p className="paragraph-slider">Work with someone perfect for your team &amp; get amazing results working with the best employees, hire talents with confidence!</p>
                 </div>
             </div>
             <div className="container">
                 <button type="button" className="btn-left"><FaChevronLeft  className="icon"/></button>
                 <section className="slider-container">
-                    {candidates.slice(0, 6).map((candidate) => {
+                    {candidates.slice(0, visible).map((candidate) => {
                         return (
                             <div className="carousel" key={candidate.id}>
                                 <div className="image">
@@ -51,7 +46,7 @@ const CarouselSlider = () => {
                         )
                     })}
                 </section>
-                <button type="button" className="btn-right" onClick={nextPerson}><FaChevronRight className="icon" /></button>
+                <button type="button" className="btn-right" onClick={loadMore} ><FaChevronRight className="icon" /></button>
             </div> 
         </div>
         

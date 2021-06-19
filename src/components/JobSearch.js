@@ -17,7 +17,7 @@ const JobSearch = () => {
                     </div>
                     <div className="location">
                         <label htmlFor="job-location">location</label>
-                        <input type="search" className="job-input" id="job-location" />
+                        <input type="search" className="job-input location" id="job-location" placeholder="City, provine or region" />
                     </div>
                     <div className="job-select">
                         <label htmlFor="category">category</label>
