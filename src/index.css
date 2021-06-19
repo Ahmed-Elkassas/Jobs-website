@@ -67,6 +67,13 @@ select:focus {
   outline: none;
 }
 
+/* Google Maps */
+.maps {
+  width: 100vw;
+  height: 40vh;
+}
+
+
 /* job filter */
 
 .job-filter {
@@ -1024,8 +1031,6 @@ Media Query
   margin-top: -100px;
   margin-bottom: 30px;
 }
-.slider-container .carousel {
-}
 .slider-wrapper button {
   margin-top: -30px;
   background-color: transparent;
@@ -1096,4 +1101,15 @@ Media Query
     padding-right: 15px;
     padding-left: 15px;
   }
+  .slider-container {
+  display: inline-flex;
+  margin-right: 20px;
+  margin-left: 50px;
+  margin-top: -100px;
+  margin-bottom: 30px;
+ }
+ .slider-container .image {
+   width: calc(96% / 2);
+ }
+
 }
