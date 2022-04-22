@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import items from "./JobsData";
 
 const Categories = ({ categories, filterItem }) => {
-  const [activeClass, setActiveClass] = useState("");
-
-  const activeFn = () => {
-    return setActiveClass("active");
-  };
+  const [selectedType, setSelectedType] = useState(0);
 
   return (
     <section>
@@ -19,11 +15,13 @@ const Categories = ({ categories, filterItem }) => {
           return (
             <button
               type="button"
-              className={`filter-category`}
+              className={`filter-category ${
+                index === selectedType && "active"
+              }`}
               key={index}
               onClick={() => {
                 filterItem(jobType);
-                // activeFn();
+                setSelectedType(index);
               }}
             >
               {jobType}
